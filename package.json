@@ -26,5 +26,8 @@
     "*.{ts,js,css,md}": "prettier --write",
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
