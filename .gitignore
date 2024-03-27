@@ -4,6 +4,7 @@ dist/
 coverage
 package-lock.json
 globalConfig.json
+.eslintcache
 
 # Compiled Java class files
 *.class
