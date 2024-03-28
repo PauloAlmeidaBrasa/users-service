@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "sucrase-node src/main/server.ts",
+    "dev": "nodemon src/main/server.ts"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +20,9 @@
     "git-commit-msg-linter": "^5.0.7",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.2",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
+    "sucrase": "^3.35.0",
     "typescript": "^5.4.3"
   },
   "lint-staged": {
@@ -28,6 +32,15 @@
     "*.{js,css,md}": "prettier --write"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "git-commit-msg-linter"
+    }
   }
 }
