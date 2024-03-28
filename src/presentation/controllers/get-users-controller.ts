@@ -1,7 +1,8 @@
 import { Controller, HttpResponse, ok } from '../protocols'
+import { HttpRequest } from '../protocols'
 //import { BuyUsecase } from "../../domain/usecases/buy-usecase";
 
-export class UserBaseController implements Controller {
+export class GetUsersConroller implements Controller {
   //private useCase:any
   //   constructor(usecase:BuyUsecase) {
   //     this.useCase = usecase
@@ -16,7 +17,11 @@ export class UserBaseController implements Controller {
 
   // }
 
-  async handle(): Promise<HttpResponse> {
+  async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
+
+   
+    // const { offset, limit } = httpRequest.body
+
     //httpRequest: HttpRequest
     //this.bodyReqValidate(httpRequest.body)
     //const usecaseReturn = await this.useCase.handle(httpRequest)
