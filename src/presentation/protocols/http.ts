@@ -3,7 +3,10 @@ export interface HttpResponse {
   body: any
 }
 export interface HttpRequest {
-  body?: any
+  body?: {
+    offset?: number
+    limit?: number
+  }
 }
 export const ok = (data: any): HttpResponse => ({
   statusCode: 200,
