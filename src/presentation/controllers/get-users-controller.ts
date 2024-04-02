@@ -21,7 +21,6 @@ export class GetUsersConroller implements Controller {
 
   // }
   validLimitAndOffset(req: HttpRequest) {
-    console.log()
     if (!req.body.limit) {
       throw badRequest(new MissingParamError('offset'))
     }
@@ -34,7 +33,8 @@ export class GetUsersConroller implements Controller {
       this.validLimitAndOffset(httpRequest)
       return ok('usecaseReturn')
     } catch (error) {
-      return error
+      console.log('   dbbbbbbbbbbbbbbbbbbbb  ', error)
+      return { body: error.body, statusCode: 400 }
     }
   }
 }
